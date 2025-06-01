@@ -5,14 +5,20 @@ import featured from "../../assets/featured.png";
 
 function PickedArticle({ style }) {
   return (
-    <div className={`w-full h-72 flex  mt-16 cursor-pointer ${style}`}>
-      <div className="h-72 w-[350px] shrink-0">
-        <img className="h-full w-full rounded-r-lg" src={featured} alt="" />
+    <div
+      className={`flex cursor-pointer rounded-lg max-md:min-w-full max-md:border max-md:border-white max-md:bg-white/60 max-md:p-4 ${style}`}
+    >
+      <div className="shrink-0 md:h-52 md:w-60 lg:h-72 lg:w-[350px]">
+        <img
+          className="h-full w-full rounded-r-lg object-cover max-md:hidden"
+          src={featured}
+          alt=""
+        />
       </div>
-      <div className="ml-10 ">
+      <div className="md:ml-10">
         <PostTitle />
         <PostDetails />
-        <div className="line-clamp-4">
+        <div className="line-clamp-2 max-md:text-sm md:line-clamp-3 lg:line-clamp-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In possimus
           unde alias aperiam asperiores sunt dolor enim inventore et, animi
           quasi corrupti soluta dicta, repellendus eveniet incidunt omnis

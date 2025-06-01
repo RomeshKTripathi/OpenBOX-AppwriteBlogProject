@@ -5,14 +5,14 @@ import PostTitle from "./PostTitle";
 
 function SuggestedArticle() {
   return (
-    <div className="h-52 flex mb-10 border-r-[5px] duration-200 cursor-pointer border-transparent hover:border-neutral-200">
-      <div className="h-full w-64 shrink-0">
+    <div className="flex cursor-pointer overflow-hidden rounded-xl border-r-[5px] border-transparent bg-white duration-200 hover:border-neutral-200 max-md:flex-col md:h-52">
+      <div className="h-full w-64 shrink-0 max-md:w-full">
         <img className="size-full" src={plan} alt="" />
       </div>
-      <div className="ml-10">
+      <div className="p-4 md:ml-10">
         <PostTitle />
         <PostDetails />
-        <div className=" line-clamp-2">
+        <div className="line-clamp-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
           blanditiis nesciunt eius, reiciendis atque voluptatem quas dolorum
           sint nulla asperiores error provident nisi aliquam rem. Obcaecati

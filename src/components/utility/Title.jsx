@@ -2,10 +2,9 @@ import React from "react";
 
 function Title({ text }) {
   return (
-    <div className="w-full flex my-10 justify-center">
-      <div className="text-4xl font-bold ">
+    <div className="my-4 flex w-full justify-center md:my-10">
+      <div className=" w-fit text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl bottom-line">
         {text ?? "Editor's Pick"}
-        <div className="w-32 h-1 bg-black mx-auto mt-4"></div>
       </div>
     </div>
   );

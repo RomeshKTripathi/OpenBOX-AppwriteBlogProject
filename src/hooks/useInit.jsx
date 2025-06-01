@@ -4,6 +4,7 @@ import { authentication } from "../appwrite/Authentication";
 import { storeLogin } from "../store/userSlice";
 
 const useInit = () => {
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const userData = useSelector((state) => state.user.userData);
     const dispatch = useDispatch();
@@ -18,8 +19,9 @@ const useInit = () => {
                     console.log(err);
                     setError(err);
                 });
+        setLoading(false);
     }, []);
-    return [error];
+    return [error, loading];
 };
 
 export default useInit;

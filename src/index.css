@@ -3,85 +3,98 @@
 @tailwind utilities;
 
 .loader {
-    display: inline-block;
-    position: relative;
-    height: 12px;
-    width: 12px;
-    background-color: rgb(139, 139, 139);
-    border-radius: 50%;
-    animation: three-dot-loader 300ms 100ms linear alternate infinite;
+  display: inline-block;
+  position: relative;
+  height: 12px;
+  width: 12px;
+  background-color: rgb(139, 139, 139);
+  border-radius: 50%;
+  animation: three-dot-loader 300ms 100ms linear alternate infinite;
+}
+.bottom-line {
+  position: relative;
+}
+.bottom-line::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 4px;
+  width: 60%;
+  left: 20%;
+  bottom: -6px;
+  margin-top: 3px;
 }
 
 .loader::before,
 .loader::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgb(139, 139, 139);
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgb(139, 139, 139);
 }
 
 .loader::before {
-    left: -16px;
-    animation: three-dot-loader 300ms linear alternate infinite;
+  left: -16px;
+  animation: three-dot-loader 300ms linear alternate infinite;
 }
 .loader::after {
-    left: 16px;
-    animation: three-dot-loader 300ms 200ms linear alternate infinite;
+  left: 16px;
+  animation: three-dot-loader 300ms 200ms linear alternate infinite;
 }
 
 .slide {
-    animation: toast_slide 1000ms ease-out;
+  animation: toast_slide 1000ms ease-out;
 }
 
 .pop {
-    animation: toast_pop 300ms linear;
+  animation: toast_pop 300ms linear;
 }
 
 .fade {
-    animation: toast_fade 300ms ease-in;
+  animation: toast_fade 300ms ease-in;
 }
 
 @keyframes toast_fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes toast_pop {
-    0% {
-        transform: scale(0.7);
-    }
-    70% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0.7);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes toast_slide {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100px, 0);
-    }
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes three-dot-loader {
-    0% {
-        background-color: black;
-    }
-    50%,
-    100% {
-        background-color: rgb(139, 139, 139);
-    }
+  0% {
+    background-color: black;
+  }
+  50%,
+  100% {
+    background-color: rgb(139, 139, 139);
+  }
 }
